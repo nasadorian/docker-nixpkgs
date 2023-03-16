@@ -31,10 +31,10 @@ nix-build \
   --no-out-link \
   --option sandbox true \
 
-if [[ $(git rev-parse --abbrev-ref HEAD) != master ]]; then
-  banner "Skipping push on non-master branch"
-  exit
-fi
+# if [[ $(git rev-parse --abbrev-ref HEAD) != master ]]; then
+#   banner "Skipping push on non-master branch"
+#   exit
+# fi
 
 if [[ -n "${registry_auth}" ]]; then
   banner "docker login"
